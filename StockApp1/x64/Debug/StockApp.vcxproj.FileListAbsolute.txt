@@ -1,0 +1,2 @@
+D:\Advance C++\StockApp\x64\Debug\StockApp.exe
+D:\Advance C++\StockApp1\x64\Debug\StockApp.exe
