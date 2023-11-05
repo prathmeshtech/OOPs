@@ -1,100 +1,82 @@
+/*
+ Class is just a template or blueprint from which objects are created.
+ Class does not occupy any memory untill objects are created.
+*/ 
+
+/*
+                                         Access Specifiers
+ Encapsulation: Access specifiers help enforce encapsulation, bundling data (attributes) and methods that operate on that data 
+  into a single unit (class) and controlling access to that data. Access specifiers define how class members are accessible from
+  outside the class.
+
+ Data Hiding : By using access specifiers, you can hide the internal implementation details of a class from the outside world.
+  This prevents external code from directly modifying or accessing the class's internal data, ensuring data integrity and reducing
+  the risk of unintended side effects.
+
+ Security : Access specifiers provide a level of security.You can make sensitive data or methods private to prevent unauthorized
+  access and manipulation.Only the class itself can access private members.
+
+ Inheritance : Access specifiers are crucial for inheritance.They control how members of a base class are inherited and
+  accessible in derived classes.For example, public members of a base class are accessible to derived classes, while private 
+  members are not.
+
+*/                                          
+
+
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-class Youtube {
-private:
-    std::string channelName;
-    int Subscribe;
+class Youtube {                                // Class
+public:
+    string channelname;
+
+private:                                      // Private access specifier is default specifier also
+    int subscriber;
     int likes;
     int dislikes;
 
 public:
-    // Constructor
-    /*Youtube(string name){
-        channelName = name;
-        Subscribe = 0;
-        likes = 0;
-        dislikes = 0;
-    }*/
-
-    void setVal(string name) {
-        channelName = name;
-        Subscribe = 0;
+    void setVal() {
+        subscriber = 0;
         likes = 0;
         dislikes = 0;
     }
 
-    // Method to show channel info
-    void showChannelInfo() {
-        cout << "Channel Name: " << channelName << std::endl;
-        cout << "Techsido Fam: " << Subscribe << std::endl;
-        cout << "Likes: " << likes << std::endl;
-        cout << "Dislikes: " << dislikes << std::endl;
+    void showChannel(string name) {                // Funtion defination inside the class
+        cout << "Channel Name: " << name << endl;
+        cout << "Techsido Fam: " << subscriber << endl;
+        cout << "Likes: " << likes << endl;
+        cout << "dislikes: " << dislikes << endl;
     }
 
-    // Method to subscribe to the channel
-    void subscribe() {
-        Subscribe++;
-        cout << "Subscribed to " << channelName << std::endl;
+    void subscribed() {
+        subscriber++;
+        cout << "Subscribed to TechSido " << endl;
     }
 
-    // Method to unsubscribe from the channel
-    void unsubscribe() {
-        Subscribe--;
-        cout << "Unsubscribed from " << channelName << std::endl;
-    }
-
-    // Method to like the channel
-    void like() {
+    void liked() {
         likes++;
-        cout << "Liked " << channelName << std::endl;
+        cout << "Liked the channel" << endl;
     }
 
-    // Method to dislike the channel
-    void dislike() {
+    void disliked() {
         dislikes++;
-        cout << "Disliked " << channelName << std::endl;
+        cout << "Disliked the channel" << endl;
     }
 };
 
+
+
 int main() {
-    // Create a TVChannel object
-    Youtube myChannel/*("TechSido - Your Tech Pal")*/;
-    string name = "TechSido - Your Tech Pal";
-    myChannel.setVal(name);
-
-    // Display channel information
-    myChannel.showChannelInfo();
-
-    cout << "\n";
-
-    // Subscribe to the channel
-    myChannel.subscribe();
-    myChannel.subscribe();
-    myChannel.subscribe();
-    myChannel.subscribe();
-    myChannel.subscribe(); myChannel.subscribe(); myChannel.subscribe(); myChannel.subscribe(); myChannel.subscribe();
-
-    // Like the channel
-    myChannel.like();
-    cout << "\n";
-
-    // Display updated channel information
-    myChannel.showChannelInfo();
-    cout << "\n";
-
-    // Dislike the channel
-    myChannel.dislike();
-    cout << "\n";
-
-    // Unsubscribe from the channel
-    myChannel.unsubscribe();
-    cout << "\n";
-
-    // Display final channel information
-    myChannel.showChannelInfo();
+    string name = "Techsido ";
+    Youtube techsido;
+    techsido.setVal();
+    /*techsido.subscriber = 1000;*/      //------------------ we cant access as subscriber is private
+    techsido.subscribed();
+    techsido.liked(); 
+    techsido.showChannel(name);
 
     return 0;
 }
