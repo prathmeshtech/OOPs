@@ -23,3 +23,10 @@ Roadmap for Being an Orignal Software Engg.
  Inheritance : Access specifiers are crucial for inheritance.They control how members of a base class are inherited and
   accessible in derived classes.For example, public members of a base class are accessible to derived classes, while private 
   members are not.    
+
+                                         **Static keyword**
+                                         
+Space allocated till the end of program lifetime.(End of Main function execution)
+  1. Static Data Members
+  2. Static Class objects  - Static class objects allows object to live till the end of the program and not only upto the scope.
+  3. Static member functions - static member functions are allowed to access only the static data members 
