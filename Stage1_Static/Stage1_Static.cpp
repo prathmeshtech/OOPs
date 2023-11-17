@@ -21,3 +21,20 @@ int main()
 
     return 0;
 }
+
+
+//class Youtube {
+//public:
+//    Youtube() {
+//
+//    }
+//};
+//
+//int main()
+//{
+//    {
+//        static Youtube techsido;
+//    }
+//
+//    return 0;
+//}
