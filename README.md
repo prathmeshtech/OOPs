@@ -36,7 +36,7 @@ Space is allocated till the end of the program's lifetime. (End of Main function
 
   3. Static member functions - static member functions are allowed to access only the static data members
 
-                                         **Constructors**
+                                        **Constructors**
 A constructor is a special method that is just invoked automatically, every time an object is created.
 
 Characteristic of Constructor:
