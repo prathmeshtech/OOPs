@@ -34,4 +34,15 @@ Space is allocated till the end of the program's lifetime. (End of Main function
      
   2. Static Class objects  - Static class objects allow an object to live till the end of the program and not only up to the scope.
 
-  3. Static member functions - static member functions are allowed to access only the static data members 
+  3. Static member functions - static member functions are allowed to access only the static data members
+
+                                        **Constructors**
+A constructor is a special method that is just invoked automatically, every time an object is created.
+
+Characteristic of Constructor:
+1. Constructor name is the same as the class name, and they get called automatically when we create object of class.
+2. Constructor does not return value, hence does not have a return type.
+3. Contructor  cannot be declared as virtual.
+4. Contructor can be overloaded.
+5. If we don't specify a constructor, the C++ compiler generates a default constructor for the object (No Parameter and has an empty body).
+
